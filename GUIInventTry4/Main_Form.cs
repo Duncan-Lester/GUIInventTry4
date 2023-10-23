@@ -59,6 +59,26 @@ namespace GUIInventTry4
             }
             else return;
         }
+
+        private void searchPart_Click(Object sender, EventArgs e)
+        {
+            int wantID = int.Parse(textBox1.Text);
+            if (wantID < 1) return;
+            Part matchPart = Inventory.lookupPart(wantID);
+            foreach (DataGridViewRow row in partGrid.Rows)
+            {
+                Part part = (Part)row.DataBoundItem;
+                if (part.PartID == matchPart.PartID)
+                {
+                    row.Selected = true;
+                    break;
+                }
+                else
+                {
+                    row.Selected = false;
+                }
+            }
+        }
         private void AddProduct_Click(object sender, EventArgs e)
         {
             new AddProductForm().ShowDialog();
@@ -86,6 +106,25 @@ namespace GUIInventTry4
                 }
             }
             else return;
+        }
+        private void SearchProd_Click(Object sender, EventArgs e)
+        {
+            int wantProdID = int.Parse(textBox2.Text);
+            if (wantProdID < 1) { return; }   
+            Product matchProd = Inventory.lookupProduct(int.Parse(textBox2.Text));
+            foreach (DataGridViewRow row in prodGrid.Rows)
+            {
+                Product prod = (Product)row.DataBoundItem;
+                if (prod.ProductID == matchProd.ProductID)
+                {
+                    row.Selected = true;
+                    break;
+                }
+                else
+                {
+                    row.Selected = false;
+                }
+            }
         }
         private void ExitAppButton_Click(object sender, EventArgs e)
         {

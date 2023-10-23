@@ -31,7 +31,7 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            button1 = new Button();
+            search = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
@@ -76,14 +76,15 @@
             label3.TabIndex = 4;
             label3.Text = "Products";
             // 
-            // button1
+            // search
             // 
-            button1.Location = new Point(247, 91);
-            button1.Name = "button1";
-            button1.Size = new Size(55, 23);
-            button1.TabIndex = 5;
-            button1.Text = "Search";
-            button1.UseVisualStyleBackColor = true;
+            search.Location = new Point(247, 91);
+            search.Name = "search";
+            search.Size = new Size(55, 23);
+            search.TabIndex = 5;
+            search.Text = "Search";
+            search.UseVisualStyleBackColor = true;
+            search.Click += searchPart_Click;
             // 
             // button2
             // 
@@ -93,6 +94,7 @@
             button2.TabIndex = 6;
             button2.Text = "Search";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += SearchProd_Click;
             // 
             // button3
             // 
@@ -215,7 +217,7 @@
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(search);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -232,7 +234,7 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private Button button1;
+        private Button search;
         private Button button2;
         private Button button3;
         private Button button4;

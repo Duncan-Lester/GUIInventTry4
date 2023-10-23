@@ -57,20 +57,22 @@ namespace GUIInventTry4
             if (radioButton1.Checked)
             {
 
-                int machineID = int.Parse(textBox7.Text);
-                Inhouse inhouse = new(findCount(), name, inventstock, price, minstock, maxstock, machineID);
-                Inhouse inpart = inhouse;
-                Inventory.addPart(inpart);
+                //int machineID = int.Parse(textBox7.Text);
+                //Inhouse inhouse = new(findCount(), name, inventstock, price, minstock, maxstock, machineID);
+               // Inhouse inpart = inhouse;
+              //  Inventory.addPart(inpart);
             }
 
-            else
-            {
-                string company = textBox7.Text;
-                //Outsourced outpart = new(findCount(), name, inventstock, price, minstock, maxstock, company);
-            }
+            //else if (radioButton2.Checked) 
+            //{
+               // string company = textBox7.Text;
+               // Outsourced outpart = new(findCount(), name, inventstock, price, minstock, maxstock, company);
+               // Outsourced outp = outpart;
+               // Inventory.addPart(outp);
+            //}
             //application.OpenForms[0].partGrid.Update();
             // application.OpenForms[0].partGrid.Refresh();
-            Close();
+            //Close();
         }
         private void AddPart_Load(object sender, EventArgs e)
         {
@@ -97,11 +99,11 @@ namespace GUIInventTry4
         {
 
         }
-        private int findCount()
-        {
-            int partCounter = Inventory.AllParts.Count + 1;
-            return partCounter;
-        }
+      //  private int findCount()
+        //{
+            //int partCounter = Inventory.AllParts.Count + 1;
+            //return partCounter;
+        //}
     }
    // private int findCount() { int num = Inventory.AllParts.Count; }
         
