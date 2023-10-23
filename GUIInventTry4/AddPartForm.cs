@@ -58,31 +58,26 @@ namespace GUIInventTry4
             {
 
                 int machineID = int.Parse(textBox7.Text);
-                Inhouse inhouse = new(findCount(), name, inventstock, price, minstock, maxstock, machineID);
-                Inhouse inpart = inhouse;
-                Inventory.addPart(inpart);
+               Inhouse inhouse = new(findCount(), name, inventstock, price, minstock, maxstock, machineID);
+               Inhouse inpart = inhouse;
+               Inventory.addPart(inpart);
             }
 
             else if (radioButton2.Checked) 
             {
             string company = textBox7.Text;
-            Outsourced outpart = new(findCount(), name, inventstock, price, minstock, maxstock, company);
+           Outsourced outpart = new(findCount(), name, inventstock, price, minstock, maxstock, company);
            Outsourced outp = outpart;
-            Inventory.addPart(outp);
+           Inventory.addPart(outp);
             }
-           // application.OpenForms[0].partGrid.Update();
-           // application.OpenForms[0].partGrid.Refresh();
             Close();
         }
-        private void AddPart_Load(object sender, EventArgs e)
-        {
 
-        }
-        private void radiobutton1_CheckedChanged(object sender, EventArgs e)
+        public void radiobutton1_CheckedChanged(object sender, EventArgs e)
         {
             label6.Text = "Machine ID";
         }
-        private void radiobutton2_CheckedChanged(object sender, EventArgs e)
+        public void radiobutton2_CheckedChanged(object sender, EventArgs e)
         {
             label6.Text = "Company Name";
         }
@@ -90,20 +85,11 @@ namespace GUIInventTry4
         {
             Close();
         }
-
-        private void label3_Click(object sender, EventArgs e) { }
-        private void label6_Click(object sender, EventArgs e) { }
-        private void label8_Click(object sender, EventArgs e) { }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
         private int findCount()
         {
-            int partCounter = Inventory.AllParts.Count + 1;
-            return partCounter;
-        }
+          int partCounter = Inventory.AllParts.Count + 1;
+          return partCounter;
+       }
     }
 
 }

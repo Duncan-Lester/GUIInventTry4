@@ -140,7 +140,6 @@
             label1.Size = new Size(56, 15);
             label1.TabIndex = 9;
             label1.Text = "Add  Part";
-            label1.Click += label1_Click;
             // 
             // ID
             // 
@@ -159,7 +158,6 @@
             PartName.Size = new Size(39, 15);
             PartName.TabIndex = 11;
             PartName.Text = "Name";
-            PartName.Click += label3_Click;
             // 
             // Inventory
             // 
@@ -201,7 +199,6 @@
             label6.Size = new Size(114, 15);
             label6.TabIndex = 16;
             label6.Text = "MacID/Comp Name";
-            label6.Click += label6_Click;
             // 
             // Min
             // 
@@ -220,7 +217,6 @@
             Max.Size = new Size(30, 15);
             Max.TabIndex = 18;
             Max.Text = "Max";
-            Max.Click += label8_Click;
             // 
             // AddPartForm
             // 
@@ -248,7 +244,6 @@
             Controls.Add(radioButton1);
             Name = "AddPartForm";
             Text = "Add Part";
-            Load += AddPart_Load;
             ResumeLayout(false);
             PerformLayout();
         }
