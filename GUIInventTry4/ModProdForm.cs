@@ -13,7 +13,7 @@ namespace GUIInventTry4
     public partial class ModProdForm : Form
     {
         BindingList<Part> addedParts = new BindingList<Part>();
-        Main_Form mainWindow = (Main_Form)Application.OpenForms["MainForm"];
+        //Main_Form mainWindow = (Main_Form)Application.OpenForms["MainForm"];
         public ModProdForm(Product Prod1)
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace GUIInventTry4
         private void SaveProd_Clic(object sender, EventArgs e)
 
         {
-
+            
         }
 
         private void AddParttoProd_Click(object sender, EventArgs e)

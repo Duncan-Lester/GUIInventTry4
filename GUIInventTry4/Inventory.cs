@@ -100,13 +100,13 @@ namespace GUIInventTry4
         {
             Part example1 = new Inhouse(1, "example part 1", 10, 50000m, 5, 10, 008);
             Part example2 = new Outsourced(2, "example part 2", 44, 1.0m, 10, 45, "Test Comp");
-            AllParts.Add(example1);
-            AllParts.Add(example2);
+            addPart(example1);
+            addPart(example2);
         }
         public static void StockProd()
         {
             Product prod1 = new Product(1, "ex prod 1", 2, 5m, 1, 10);
-            Products.Add(prod1); ;
+            addProduct(prod1); ;
         }
     }
 }

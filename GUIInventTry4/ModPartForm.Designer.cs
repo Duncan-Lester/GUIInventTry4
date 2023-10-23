@@ -82,6 +82,7 @@
             Save.TabIndex = 2;
             Save.Text = "Save";
             Save.UseVisualStyleBackColor = false;
+            Save.Click += SavePart_Click;
             // 
             // Cancel
             // 

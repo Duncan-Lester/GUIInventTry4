@@ -29,8 +29,6 @@ namespace GUIInventTry4
         private void AddPart_Click(object sender, EventArgs e)
         {
             new AddPartForm().ShowDialog();
-            partGrid.Update();
-            partGrid.Refresh();
         }
         private void ModPart_Click(object sender, EventArgs e)
         {
@@ -62,6 +60,8 @@ namespace GUIInventTry4
 
         private void searchPart_Click(Object sender, EventArgs e)
         {
+            // this part is bad code; lots of errors possible if i don't force nice INTs in the search bar, not in assignment req's.
+            // i should error check with a Try / Catch but lazy.
             int wantID = int.Parse(textBox1.Text);
             if (wantID < 1) return;
             Part matchPart = Inventory.lookupPart(wantID);
@@ -109,6 +109,7 @@ namespace GUIInventTry4
         }
         private void SearchProd_Click(Object sender, EventArgs e)
         {
+            // this part is bad code; lots of errors possible if i don't force nice INTs in the search bar, not in assignment req's.
             int wantProdID = int.Parse(textBox2.Text);
             if (wantProdID < 1) { return; }   
             Product matchProd = Inventory.lookupProduct(int.Parse(textBox2.Text));
