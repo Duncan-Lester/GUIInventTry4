@@ -24,6 +24,7 @@ namespace GUIInventTry4
             var botT = new BindingSource();
             botT.DataSource = addedParts;
             assocPartGrid.DataSource = botT;
+            IDtextBox.Text = (Inventory.Products.Count + 1).ToString();
         }
         private void SaveProd_Clic(object sender, EventArgs e)
 

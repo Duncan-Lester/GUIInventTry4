@@ -18,6 +18,7 @@ namespace GUIInventTry4
         public AddPartForm()
         {
             InitializeComponent();
+            IDtextBox.Text = (Inventory.AllParts.Count +1).ToString();
         }
         public void SavePart_Click(object sender, EventArgs e)
         {
