@@ -30,9 +30,7 @@
         {
             yeetPartfromProd = new Button();
             assocPart = new Button();
-            listBox2 = new ListBox();
             label3 = new Label();
-            listBox1 = new ListBox();
             label2 = new Label();
             search1 = new Button();
             searchBoxOne = new TextBox();
@@ -51,34 +49,31 @@
             InventoryText = new Label();
             ProductName = new Label();
             ID = new Label();
+            candPartGrid = new DataGridView();
+            assocPartGrid = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)candPartGrid).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)assocPartGrid).BeginInit();
             SuspendLayout();
             // 
             // yeetPartfromProd
             // 
-            yeetPartfromProd.Location = new Point(626, 369);
+            yeetPartfromProd.Location = new Point(713, 411);
             yeetPartfromProd.Name = "yeetPartfromProd";
             yeetPartfromProd.Size = new Size(75, 23);
             yeetPartfromProd.TabIndex = 62;
             yeetPartfromProd.Text = "Delete";
             yeetPartfromProd.UseVisualStyleBackColor = true;
+            yeetPartfromProd.Click += RemoveAssocPart_Clic;
             // 
             // assocPart
             // 
-            assocPart.Location = new Point(626, 164);
+            assocPart.Location = new Point(713, 196);
             assocPart.Name = "assocPart";
             assocPart.Size = new Size(75, 23);
             assocPart.TabIndex = 61;
             assocPart.Text = "Add";
             assocPart.UseVisualStyleBackColor = true;
-            // 
-            // listBox2
-            // 
-            listBox2.FormattingEnabled = true;
-            listBox2.ItemHeight = 15;
-            listBox2.Location = new Point(349, 239);
-            listBox2.Name = "listBox2";
-            listBox2.Size = new Size(352, 124);
-            listBox2.TabIndex = 60;
+            assocPart.Click += AddParttoProd_Click;
             // 
             // label3
             // 
@@ -88,15 +83,6 @@
             label3.Size = new Size(190, 15);
             label3.TabIndex = 59;
             label3.Text = "Parts Associated With This Product";
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(349, 33);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(352, 124);
-            listBox1.TabIndex = 58;
             // 
             // label2
             // 
@@ -115,6 +101,7 @@
             search1.TabIndex = 56;
             search1.Text = "Search";
             search1.UseVisualStyleBackColor = true;
+            search1.Click += SearchParts_Click;
             // 
             // searchBoxOne
             // 
@@ -173,6 +160,7 @@
             Save.TabIndex = 49;
             Save.Text = "Save";
             Save.UseVisualStyleBackColor = false;
+            Save.Click += SaveProd_Clic;
             // 
             // label1
             // 
@@ -251,16 +239,34 @@
             ID.TabIndex = 40;
             ID.Text = "ID";
             // 
+            // candPartGrid
+            // 
+            candPartGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            candPartGrid.Location = new Point(349, 33);
+            candPartGrid.Name = "candPartGrid";
+            candPartGrid.RowTemplate.Height = 25;
+            candPartGrid.Size = new Size(439, 157);
+            candPartGrid.TabIndex = 63;
+            // 
+            // assocPartGrid
+            // 
+            assocPartGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            assocPartGrid.Location = new Point(349, 239);
+            assocPartGrid.Name = "assocPartGrid";
+            assocPartGrid.RowTemplate.Height = 25;
+            assocPartGrid.Size = new Size(439, 157);
+            assocPartGrid.TabIndex = 64;
+            // 
             // AddProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(assocPartGrid);
+            Controls.Add(candPartGrid);
             Controls.Add(yeetPartfromProd);
             Controls.Add(assocPart);
-            Controls.Add(listBox2);
             Controls.Add(label3);
-            Controls.Add(listBox1);
             Controls.Add(label2);
             Controls.Add(search1);
             Controls.Add(searchBoxOne);
@@ -281,6 +287,8 @@
             Controls.Add(ID);
             Name = "AddProductForm";
             Text = "Add Product";
+            ((System.ComponentModel.ISupportInitialize)candPartGrid).EndInit();
+            ((System.ComponentModel.ISupportInitialize)assocPartGrid).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -289,9 +297,7 @@
 
         private Button yeetPartfromProd;
         private Button assocPart;
-        private ListBox listBox2;
         private Label label3;
-        private ListBox listBox1;
         private Label label2;
         private Button search1;
         private TextBox searchBoxOne;
@@ -310,5 +316,7 @@
         private Label InventoryText;
         private Label ProductName;
         private Label ID;
+        private DataGridView candPartGrid;
+        private DataGridView assocPartGrid;
     }
 }

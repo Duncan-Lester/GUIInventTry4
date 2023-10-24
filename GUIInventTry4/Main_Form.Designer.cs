@@ -247,7 +247,7 @@
         private TextBox textBox2;
         private DataGridView partGrid;
         private DataGridViewTextBoxColumn Column1;
-        private DataGridView prodGrid;
+        public DataGridView prodGrid;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
     }
 }

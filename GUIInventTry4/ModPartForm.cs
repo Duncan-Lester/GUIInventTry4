@@ -79,8 +79,18 @@ namespace GUIInventTry4
             if (radioButton1.Checked)
             {
                 Inhouse inP = new Inhouse(id, name, inventstock, price, minstock, maxstock, int.Parse(textBox7.Text));
-                Inventory.updatePart(id, inP);
+                Part oldPart = Inventory.lookupPart(id);
+                Inventory.updatePart(oldPart, inP) ;
                 radioButton1.Checked = true;
+                Close();
+            }
+            if (radioButton2.Checked)
+            {
+                Outsourced outP = new Outsourced(id, name, inventstock, price, minstock, maxstock, textBox7.Text);
+                Part oldPart = Inventory.lookupPart(id);
+                Inventory.updatePart(oldPart, outP);
+                radioButton2.Checked = true;
+                Close();
             }
         }
         private void label3_Click(object sender, EventArgs e)

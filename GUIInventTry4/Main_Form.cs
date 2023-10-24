@@ -29,8 +29,6 @@ namespace GUIInventTry4
         private void AddPart_Click(object sender, EventArgs e)
         {
             new AddPartForm().ShowDialog();
-            Part example3 = new Outsourced(Inventory.AllParts.Count +1, "example part 3", 44, 1.0m, 10, 45, "Test Comp");
-            Inventory.addPart(example3);
         }
         private void ModPart_Click(object sender, EventArgs e)
         {

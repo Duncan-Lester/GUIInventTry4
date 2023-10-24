@@ -90,10 +90,10 @@ namespace GUIInventTry4
             return emptyPart;
         }
 
-        public static void updatePart(int partID, Part part)
+        public static void updatePart(Part oldPart, Part newPart)
         {
-            deletePart(part);
-            addPart(part);
+            deletePart(oldPart);
+            addPart(newPart);
         }
 
         public static void StockParts()
