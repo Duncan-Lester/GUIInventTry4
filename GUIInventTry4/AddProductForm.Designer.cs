@@ -48,7 +48,7 @@
             maxBox = new TextBox();
             minBox = new TextBox();
             Price = new Label();
-            Inventory = new Label();
+            InventoryText = new Label();
             ProductName = new Label();
             ID = new Label();
             SuspendLayout();
@@ -224,14 +224,14 @@
             Price.TabIndex = 43;
             Price.Text = "Price";
             // 
-            // Inventory
+            // InventoryText
             // 
-            Inventory.AutoSize = true;
-            Inventory.Location = new Point(32, 157);
-            Inventory.Name = "Inventory";
-            Inventory.Size = new Size(57, 15);
-            Inventory.TabIndex = 42;
-            Inventory.Text = "Inventory";
+            InventoryText.AutoSize = true;
+            InventoryText.Location = new Point(32, 157);
+            InventoryText.Name = "InventoryText";
+            InventoryText.Size = new Size(57, 15);
+            InventoryText.TabIndex = 42;
+            InventoryText.Text = "Inventory";
             // 
             // ProductName
             // 
@@ -276,7 +276,7 @@
             Controls.Add(maxBox);
             Controls.Add(minBox);
             Controls.Add(Price);
-            Controls.Add(Inventory);
+            Controls.Add(InventoryText);
             Controls.Add(ProductName);
             Controls.Add(ID);
             Name = "AddProductForm";
@@ -307,7 +307,7 @@
         private TextBox maxBox;
         private TextBox minBox;
         private Label Price;
-        private Label Inventory;
+        private Label InventoryText;
         private Label ProductName;
         private Label ID;
     }

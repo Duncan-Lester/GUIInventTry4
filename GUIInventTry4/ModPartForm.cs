@@ -79,7 +79,7 @@ namespace GUIInventTry4
             if (radioButton1.Checked)
             {
                 Inhouse inP = new Inhouse(id, name, inventstock, price, minstock, maxstock, int.Parse(textBox7.Text));
-                //Inventory.UpdatePart(id, inP);
+                Inventory.updatePart(id, inP);
                 radioButton1.Checked = true;
             }
         }

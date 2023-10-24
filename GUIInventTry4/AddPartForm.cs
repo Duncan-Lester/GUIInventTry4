@@ -58,17 +58,17 @@ namespace GUIInventTry4
             {
 
                 int machineID = int.Parse(textBox7.Text);
-               Inhouse inhouse = new(findCount(), name, inventstock, price, minstock, maxstock, machineID);
-               Inhouse inpart = inhouse;
-               Inventory.addPart(inpart);
+                Inhouse inhouse = new(findCount(), name, inventstock, price, minstock, maxstock, machineID);
+                Inhouse inpart = inhouse;
+                Inventory.addPart(inpart);
             }
 
-            else if (radioButton2.Checked) 
+            else if (radioButton2.Checked)
             {
-            string company = textBox7.Text;
-           Outsourced outpart = new(findCount(), name, inventstock, price, minstock, maxstock, company);
-           Outsourced outp = outpart;
-           Inventory.addPart(outp);
+                string company = textBox7.Text;
+                Outsourced outpart = new(findCount(), name, inventstock, price, minstock, maxstock, company);
+                Outsourced outp = outpart;
+                Inventory.addPart(outp);
             }
             Close();
         }
@@ -87,9 +87,9 @@ namespace GUIInventTry4
         }
         private int findCount()
         {
-          int partCounter = Inventory.AllParts.Count + 1;
-          return partCounter;
-       }
+            int partCounter = Inventory.AllParts.Count + 1;
+            return partCounter;
+        }
     }
 
 }

@@ -25,7 +25,7 @@ namespace GUIInventTry4
         private void SaveProd_Clic(object sender, EventArgs e)
 
         {
-            
+
         }
 
         private void AddParttoProd_Click(object sender, EventArgs e)

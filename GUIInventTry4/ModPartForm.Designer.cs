@@ -40,7 +40,7 @@
             label1 = new Label();
             ID = new Label();
             PartName = new Label();
-            Inventory = new Label();
+            InventoryText = new Label();
             Price = new Label();
             maxBox = new TextBox();
             textBox7 = new TextBox();
@@ -161,14 +161,14 @@
             PartName.Text = "Name";
             PartName.Click += label3_Click;
             // 
-            // Inventory
+            // InventoryText
             // 
-            Inventory.AutoSize = true;
-            Inventory.Location = new Point(63, 172);
-            Inventory.Name = "Inventory";
-            Inventory.Size = new Size(57, 15);
-            Inventory.TabIndex = 12;
-            Inventory.Text = "Inventory";
+            InventoryText.AutoSize = true;
+            InventoryText.Location = new Point(63, 172);
+            InventoryText.Name = "InventoryText";
+            InventoryText.Size = new Size(57, 15);
+            InventoryText.TabIndex = 12;
+            InventoryText.Text = "Inventory";
             // 
             // Price
             // 
@@ -233,7 +233,7 @@
             Controls.Add(textBox7);
             Controls.Add(maxBox);
             Controls.Add(Price);
-            Controls.Add(Inventory);
+            Controls.Add(InventoryText);
             Controls.Add(PartName);
             Controls.Add(ID);
             Controls.Add(label1);
@@ -267,7 +267,7 @@
         private Label label1;
         private Label ID;
         private Label PartName;
-        private Label Inventory;
+        private Label InventoryText;
         private Label Price;
         private TextBox maxBox;
         private TextBox textBox7;
